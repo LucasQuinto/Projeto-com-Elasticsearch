@@ -1,0 +1,37 @@
+
+1.Baixe o Elasticsearch.
+
+2. Descompacte a pasta.
+
+3.Navegue até a pasta "bin" do Elasticsearch, abra e na barra de pesquisa do explorador de arquivos digite "cmd". Espere o prompt de comando ser executado. Àpos isso digite elasticsearch.bat
+
+4. O Elasticsearch fornecerá um bloco de código com token, usuário e senha. Copie esses dados selecionando e clicando com o botão direito do mouse. NÃO use Ctrl+C e cole no bloco de notas.
+
+5. Após isso, abra o Visual Studio Code e verifique se todos os documentos da pasta de download estão lá.
+
+6. Encontre o arquivo "elasticsearch.yml" e altere as configurações conforme abaixo:
+No final do código, adicione:
+
+
+http.cors.enabled: true
+http.cors.allow-origin: "*"
+
+7. Em seguida, encontre a parte do código:
+
+
+# Enable encryption for HTTP API client connections, such as Kibana, Logstash, and Agents
+xpack.security.http.ssl:
+  enabled: true
+  keystore.path: certs/http.p12
+
+E altere para:
+
+  enabled: false
+
+Salve o arquivo com Ctrl+S.
+
+8. Volte ao prompt de comando do Elasticsearch e pressione Ctrl+C para finalizar a tarefa. Quando aparecer a pergunta, digite "S".
+
+9.Após isso, repita o passo 3 e 4. Se não fornecer um novo token, usuário e senha, utilize o bloco do passo 5.
+
+10 . Abra um novo prompt de comando e digite seus códigos. Pronto, tudo está funcionando.
