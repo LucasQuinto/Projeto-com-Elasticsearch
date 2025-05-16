@@ -1,0 +1,141 @@
+/* Base styles */
+/* Define um modelo de caixa border-box e zera margens e preenchimento para todos os elementos */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Body */
+body {
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Container */
+/* Estilos para o container principal */
+.container {
+    width: 80%; /* Largura do container é 80% da largura do viewport */
+    max-width: 900px; /* Largura máxima do container */
+    margin: 2rem auto; /* Centraliza o container horizontalmente na página */
+    padding: 2rem; /* Preenchimento interno do container */
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Search Container */
+/* Estilos para o container de pesquisa */
+.search-container {
+    position: relative; /* Posicionamento relativo para posicionar os elementos filhos */
+    display: flex; /* Layout flexível para alinhar os elementos internamente */
+    align-items: center; /* Alinha os elementos verticalmente */
+    margin-bottom: 1.5rem;
+}
+
+/* Search Input */
+/* Estilos para a entrada de pesquisa */
+#searchInput {
+    width: 100%; /* Largura total da entrada de pesquisa */
+    padding: 1rem 1.5rem; /* Preenchimento interno */
+    border: 2px solid #0011ff; /* Borda com cor azul */
+    border-radius: 1rem; /* Borda arredondada */
+    font-size: 1rem; /* Tamanho da fonte */
+    outline: none; /* Remove o contorno ao receber foco */
+}
+
+/* Suggestions List */
+/* Estilos para a lista de sugestões */
+#suggestions {
+    position: absolute; /* Posicionamento absoluto em relação ao container pai */
+    top: 100%; /* Alinha as sugestões abaixo do campo de pesquisa */
+    left: 0; /* Alinha as sugestões à esquerda do campo de pesquisa */
+    width: 100%; /* Largura total */
+    background-color: #fff; /* Fundo branco */
+    border-top: none; /* Remove a borda superior */
+    list-style: none; /* Remove a estilização padrão da lista */
+    padding: 0; /* Remove o preenchimento */
+    margin: 0; /* Remove a margem */
+    z-index: 1; /* Coloca a lista acima de outros elementos */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    max-height: 200px; /* Altura máxima */
+    overflow-y: auto; /* Adiciona uma barra de rolagem vertical se necessário */
+}
+
+/* Individual suggestion item */
+/* Estilos para cada item de sugestão */
+#suggestions li {
+    padding: 1rem 1.5rem; /* Preenchimento interno */
+    border-bottom: 1px solid #eee; /* Borda inferior com cor mais clara */
+    cursor: pointer; /* Cursor do mouse muda para apontador */
+    transition: background-color 0.2s ease-in-out; /* Transição suave de cor de fundo */
+}
+
+#suggestions li:hover {
+    background-color: #f4f4f9;
+}
+
+/* Search Result Item */
+/* Estilos para o item de resultado da pesquisa */
+.search-result {
+    border-radius: 10px; /* Borda arredondada */
+    background-color: #fff; /* Fundo branco */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    text-align: left; /* Alinhamento à esquerda do texto */
+    padding: 2rem; /* Preenchimento interno */
+    font-size: 1rem; /* Tamanho da fonte */
+    line-height: 1.5; /* Altura da linha */
+    margin-bottom: 1.5rem; /* Margem inferior */
+}
+
+.search-result button {
+    background-color: #dc3545; /* Cor de fundo vermelha */
+    color: white; /* Cor do texto branca */
+    border: none; /* Sem borda */
+    padding: 0.5rem 1rem; /* Preenchimento interno */
+    border-radius: 5px; /* Borda arredondada */
+    cursor: pointer; /* Cursor de ponteiro */
+    font-size: 1rem; /* Tamanho da fonte */
+    margin-top: 1rem; /* Margem superior */
+}
+
+.search-result button:hover {
+    background-color: #c82333;
+}
+
+/* Add Container */
+/* Estilos para o container de adição */
+.add-container {
+    display: flex; /* Layout flexível para alinhar os elementos internamente */
+    flex-wrap: wrap; /* Permite que os elementos quebrem linha se necessário */
+    gap: 1rem; /* Espaçamento entre os elementos */
+    margin-top: 2rem; /* Margem superior */
+}
+
+.add-container input, .add-container button {
+    flex: 1 1 48%; /* Flexível com largura mínima de 48% */
+    padding: 1rem; /* Preenchimento interno */
+    font-size: 1rem; /* Tamanho da fonte */
+    border: 2px solid #ddd; /* Borda */
+    border-radius: 5px; /* Borda arredondada */
+}
+
+.add-container input:focus, .add-container button:focus {
+    border-color: #0011ff; /* Cor da borda ao receber foco */
+    outline: none; /* Remove o contorno ao receber foco */
+}
+
+.add-container button {
+    background-color: #28a745; /* Cor de fundo verde */
+    color: white; /* Cor do texto branca */
+    cursor: pointer; /* Cursor de ponteiro */
+    border: none; /* Sem borda */
+    transition: background-color 0.2s ease-in-out; /* Transição suave de cor de fundo */
+}
+
+.add-container button:hover {
+    background-color: #218838;
+}
+
